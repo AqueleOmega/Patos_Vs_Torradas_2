@@ -369,7 +369,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transJogador: {fileID: 222900984}
   transBala: {fileID: 1571665761}
+  bala: {fileID: 0}
   tiro: {fileID: 1571665763}
+  "posi\xE7\xE3oJogador": {x: 0, y: 0}
 --- !u!50 &1571665763
 Rigidbody2D:
   serializedVersion: 5
@@ -444,6 +446,46 @@ PrefabInstance:
     - target: {fileID: 4170050498562178516, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionId
+      value: ca9b02b4-8bc5-402c-998c-6abdac53be7b
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionName
+      value: 'tiro/New action[/Keyboard/space,/Keyboard/z]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1571665762}
+    - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Atirar
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Bala, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6912532702482536014, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
       propertyPath: m_Name

@@ -73,6 +73,45 @@
                     "isPartOfComposite": true
                 }
             ]
+        },
+        {
+            "name": "tiro",
+            "id": "42b0ff9d-4654-411b-87c1-e2563a7a9fbb",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Value",
+                    "id": "ca9b02b4-8bc5-402c-998c-6abdac53be7b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a3bb7324-d348-46d6-ab0c-83fae43785dc",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2013adea-cb7d-43a9-9baf-b6a065952d24",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
