@@ -8,6 +8,7 @@ public class movimentação : MonoBehaviour
     public Rigidbody2D rb;
     bool movendo = false;
     public float friction = 0.98f;
+    float angulo;
 
     public void Start()
     {
@@ -31,6 +32,8 @@ public class movimentação : MonoBehaviour
         else{
             rb.linearVelocity *= friction;
         }
+        angulo = Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, angulo);
     }
 
 

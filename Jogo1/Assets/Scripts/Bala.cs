@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
+using UnityEngine.Rendering;
 
 public class Bala : MonoBehaviour
 {
@@ -9,35 +10,42 @@ public class Bala : MonoBehaviour
     public GameObject bala;
     public Rigidbody2D tiro;
     public Vector2 posiçãoJogador;
+    public float velocidade = 10f;
+    public Vector2 direção;
+    public float rotação;
+    bool canShot = true;
 
     void FixedUpdate()
     {
         posiçãoJogador = transJogador.position;
-        Debug.Log(posiçãoJogador);
+        rotação = transJogador.eulerAngles.z;
     }
     
-    void Esconder()
-    {
-        bala.SetActive(false);
-    }
-
     public void Atirar()
     {
-        transform.position = posiçãoJogador;
-        bala.SetActive(true);
-        StartCoroutine(Esperar(2));
+        if (canShot)
+        {
+            canShot = false;
+            transform.position = posiçãoJogador;
+            bala.SetActive(true);
+            StartCoroutine(Andar());
+            StartCoroutine(Esperar(2));
+        }
+        
         
     }
-
     IEnumerator Esperar(int x)
     {
-        //Print the time of when the function is first called.
-        Debug.Log("Started Coroutine at timestamp : " + Time.time);
-
-        //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSeconds(x);
         bala.SetActive(false);
-        //After we have waited 5 seconds print the time again.
-        Debug.Log("Finished Coroutine at timestamp : " + Time.time);
+        canShot = true;
+    }
+    private IEnumerator Andar()
+    {
+        int a = 0;
+        transform.Rotate(0, 0, rotação);
+        while (a < 0)
+            transform.position += transform.forward * velocidade;
+            yield return new WaitForSeconds(1f);
     }
 }
