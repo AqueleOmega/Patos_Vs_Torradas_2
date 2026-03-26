@@ -369,7 +369,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transJogador: {fileID: 222900984}
   transBala: {fileID: 1571665761}
-  bala: {fileID: 0}
+  bala: {fileID: 1571665759}
   tiro: {fileID: 1571665763}
   "posi\xE7\xE3oJogador": {x: 0, y: 0}
 --- !u!50 &1571665763
