@@ -23,13 +23,16 @@ public class Bala : MonoBehaviour
     
     public void Atirar()
     {
+
         if (canShot)
         {
             canShot = false;
+            GameObject novaBala = Instantiate(bala, transform.position, Quaternion.identity);
             transform.position = posiçãoJogador;
-            bala.SetActive(true);
-            StartCoroutine(Andar());
-            StartCoroutine(Esperar(2));
+            Bala script = novaBala.GetComponent<Bala>();
+            novaBala.SetActive(true);
+            script.StartCoroutine(Andar());
+            script.StartCoroutine(Esperar(2));
         }
         
         
