@@ -1,7 +1,11 @@
-using UnityEngine;
-using UnityEngine.InputSystem;
+using NUnit.Framework.Constraints;
 using System.Collections;
+using UnityEngine;
+using UnityEngine.AI;
+using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
+using UnityEngine.Windows;
+
 
 public class Bala : MonoBehaviour
 {
@@ -9,16 +13,27 @@ public class Bala : MonoBehaviour
     public Transform transBala;
     public GameObject bala;
     public Rigidbody2D tiro;
-    public Vector2 posiçãoJogador;
-    public float velocidade = 10f;
-    public Vector2 direção;
-    public float rotação;
+    Vector2 posiçãoJogador;
+    public float velocidade = 1f;
     bool canShot = true;
+    public movimentação angulon;
 
-    void FixedUpdate()
+    private void Start()
+    {
+        GetComponent<SpriteRenderer>().enabled = false;
+    }
+    void Update()
     {
         posiçãoJogador = transJogador.position;
-        rotação = transJogador.eulerAngles.z;
+        Debug.Log(canShot);
+        if (canShot)
+        {
+            transform.localRotation = Quaternion.Euler(0, 0, angulon.angulo);
+            transBala.position = posiçãoJogador;
+            Debug.Log(transBala.position);
+            Debug.Log(transJogador.position);
+        }
+        
     }
     
     public void Atirar()
@@ -27,28 +42,28 @@ public class Bala : MonoBehaviour
         if (canShot)
         {
             canShot = false;
-            GameObject novaBala = Instantiate(bala, transform.position, Quaternion.identity);
-            transform.position = posiçãoJogador;
-            Bala script = novaBala.GetComponent<Bala>();
-            novaBala.SetActive(true);
-            script.StartCoroutine(Andar());
-            script.StartCoroutine(Esperar(2));
+            //GameObject novaBala = Instantiate(bala, transform.position, Quaternion.identity);
+            //novaBala.transform.position = posiçãoJogador;
+            //Bala script = novaBala.GetComponent<Bala>();
+            //novaBala.SetActive(true);
+            GetComponent<SpriteRenderer>().enabled = true;
+            StartCoroutine(Andar());
+            StartCoroutine(Esperar(2f));
         }
-        
-        
     }
-    IEnumerator Esperar(int x)
+
+    IEnumerator Esperar(float x)
     {
+        Debug.Log(x);
         yield return new WaitForSeconds(x);
-        bala.SetActive(false);
         canShot = true;
+        GetComponent<SpriteRenderer>().enabled = false;
+        Debug.Log("Foi");
     }
     private IEnumerator Andar()
     {
-        int a = 0;
-        transform.Rotate(0, 0, rotação);
-        while (a < 0)
-            transform.position += transform.forward * velocidade;
-            yield return new WaitForSeconds(1f);
+        Debug.Log("Andou");
+        tiro.linearVelocity = angulon.input * velocidade;
+        yield return null;
     }
 }

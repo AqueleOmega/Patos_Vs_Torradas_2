@@ -3,12 +3,12 @@ using UnityEngine.InputSystem;
 
 public class movimentação : MonoBehaviour
 {
-    Vector2 input;
+    public Vector2 input;
     public float velocidade = 5f;
     public Rigidbody2D rb;
     bool movendo = false;
     public float friction = 0.98f;
-    float angulo;
+    public float angulo;
 
     public void Start()
     {
