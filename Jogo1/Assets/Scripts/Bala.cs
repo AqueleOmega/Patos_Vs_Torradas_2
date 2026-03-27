@@ -17,6 +17,7 @@ public class Bala : MonoBehaviour
     public float velocidade = 1f;
     bool canShot = true;
     public movimentação angulon;
+    public float cooldown = 2f;
 
     private void Start()
     {
