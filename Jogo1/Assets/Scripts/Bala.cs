@@ -1,5 +1,6 @@
 using NUnit.Framework.Constraints;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
@@ -19,22 +20,14 @@ public class Bala : MonoBehaviour
     public movimentação angulon;
     public float cooldown = 2f;
 
-    private void Start()
-    {
-        GetComponent<SpriteRenderer>().enabled = false;
-    }
     void Update()
     {
         posiçãoJogador = transJogador.position;
-        Debug.Log(canShot);
         if (canShot)
         {
             transform.localRotation = Quaternion.Euler(0, 0, angulon.angulo);
-            transBala.position = posiçãoJogador;
-            Debug.Log(transBala.position);
-            Debug.Log(transJogador.position);
         }
-        
+
     }
     
     public void Atirar()
@@ -43,27 +36,24 @@ public class Bala : MonoBehaviour
         if (canShot)
         {
             canShot = false;
-            //GameObject novaBala = Instantiate(bala, transform.position, Quaternion.identity);
-            //novaBala.transform.position = posiçãoJogador;
-            //Bala script = novaBala.GetComponent<Bala>();
-            //novaBala.SetActive(true);
-            GetComponent<SpriteRenderer>().enabled = true;
-            StartCoroutine(Andar());
-            StartCoroutine(Esperar(2f));
+            GameObject novaBala = Instantiate(bala, transform.position, Quaternion.identity);
+            transform.position = posiçãoJogador;
+            Bala script = novaBala.GetComponent<Bala>();
+            var sr = novaBala.GetComponent<SpriteRenderer>();
+            sr.enabled = true;
+            script.StartCoroutine(Andar());
+            script.StartCoroutine(Esperar(cooldown, novaBala));
         }
     }
 
-    IEnumerator Esperar(float x)
+    IEnumerator Esperar(float x,  GameObject bala)
     {
-        Debug.Log(x);
         yield return new WaitForSeconds(x);
         canShot = true;
-        GetComponent<SpriteRenderer>().enabled = false;
-        Debug.Log("Foi");
+        bala.SetActive(false);  
     }
     private IEnumerator Andar()
     {
-        Debug.Log("Andou");
         tiro.linearVelocity = angulon.input * velocidade;
         yield return null;
     }
