@@ -17,32 +17,44 @@ public class Bala : MonoBehaviour
     Vector2 posiçãoJogador;
     public float velocidade = 1f;
     bool canShot = true;
-    public movimentação angulon;
+    public float angulo;
     public float cooldown = 2f;
+    public Vector2 input;
+
+    public void Movimentar_Bala(InputAction.CallbackContext contexto)
+    {
+        input = contexto.ReadValue<Vector2>();
+
+    }
 
     void Update()
     {
         posiçãoJogador = transJogador.position;
         if (canShot)
         {
-            transform.localRotation = Quaternion.Euler(0, 0, angulon.angulo);
+            angulo = Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg;
+            transform.localRotation = Quaternion.Euler(0, 0,angulo);
         }
-
+        Debug.Log(input);
+        Debug.Log("Oi");
     }
-    
+
     public void Atirar()
     {
 
         if (canShot)
         {
-            canShot = false;
-            GameObject novaBala = Instantiate(bala, transform.position, Quaternion.identity);
-            transform.position = posiçãoJogador;
-            Bala script = novaBala.GetComponent<Bala>();
-            var sr = novaBala.GetComponent<SpriteRenderer>();
-            sr.enabled = true;
-            script.StartCoroutine(Andar());
-            script.StartCoroutine(Esperar(cooldown, novaBala));
+            if (input != new Vector2(0,0))
+            {
+                canShot = false;
+                GameObject novaBala = Instantiate(bala, transform.position, Quaternion.identity);
+                transform.position = posiçãoJogador;
+                Bala script = novaBala.GetComponent<Bala>();
+                var sr = novaBala.GetComponent<SpriteRenderer>();
+                sr.enabled = true;
+                script.StartCoroutine(Andar());
+                script.StartCoroutine(Esperar(cooldown, novaBala));
+            }
         }
     }
 
@@ -50,11 +62,11 @@ public class Bala : MonoBehaviour
     {
         yield return new WaitForSeconds(x);
         canShot = true;
-        bala.SetActive(false);  
+        Destroy(bala);
     }
     private IEnumerator Andar()
     {
-        tiro.linearVelocity = angulon.input * velocidade;
+        tiro.linearVelocity = input * velocidade;
         yield return null;
     }
 }
