@@ -35,6 +35,7 @@ public class Bala : MonoBehaviour
             angulo = Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg;
             transform.localRotation = Quaternion.Euler(0, 0,angulo);
         }
+        Debug.Log(input);
     }
     
     public void Atirar()
