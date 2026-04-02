@@ -417,7 +417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
       propertyPath: m_ActionEvents.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_ActionId
@@ -425,7 +425,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
       propertyPath: m_ActionEvents.Array.data[2].m_ActionId
-      value: eba2cbaa-8932-4bde-bf9f-4012954a5e62
+      value: 279df0e0-afe4-4a3e-8e0e-a1e624f5bb90
       objectReference: {fileID: 0}
     - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
       propertyPath: m_ActionEvents.Array.data[3].m_ActionId
@@ -437,7 +437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
       propertyPath: m_ActionEvents.Array.data[2].m_ActionName
-      value: "movimenta\xE7\xE3o/dire\xE7\xE3oTiro[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]"
+      value: "dire\xE7\xE3o_tiro/dire\xE7\xE3o[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]"
       objectReference: {fileID: 0}
     - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
       propertyPath: m_ActionEvents.Array.data[3].m_ActionName
@@ -481,7 +481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
       propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Movimentar_Bala
+      value: Movimentar
       objectReference: {fileID: 0}
     - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName

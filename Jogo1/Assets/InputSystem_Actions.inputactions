@@ -14,15 +14,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
-                },
-                {
-                    "name": "direçãoTiro",
-                    "type": "Value",
-                    "id": "eba2cbaa-8932-4bde-bf9f-4012954a5e62",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -80,61 +71,6 @@
                     "action": "New action",
                     "isComposite": false,
                     "isPartOfComposite": true
-                },
-                {
-                    "name": "2D Vector",
-                    "id": "1634d95e-a847-432f-960c-1fcbb3fd040f",
-                    "path": "2DVector",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "direçãoTiro",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "up",
-                    "id": "9323b506-f4f0-4422-b1f4-bbef8ae23859",
-                    "path": "<Keyboard>/upArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "direçãoTiro",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "17079625-269d-4a1c-a2ee-f3b5afbce45c",
-                    "path": "<Keyboard>/downArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "direçãoTiro",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "4fbd7d39-09ca-4ffc-a797-e98ec885dda4",
-                    "path": "<Keyboard>/leftArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "direçãoTiro",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "689ea6b7-0a92-4308-b0f2-836e18a13b2a",
-                    "path": "<Keyboard>/rightArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "direçãoTiro",
-                    "isComposite": false,
-                    "isPartOfComposite": true
                 }
             ]
         },
@@ -178,14 +114,14 @@
             ]
         },
         {
-            "name": "DEBUG",
-            "id": "0d5420ab-ea52-43e5-8b38-635b7c1a09a9",
+            "name": "direção_tiro",
+            "id": "1a1feacf-a498-4bb5-a754-b7346ba2727d",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "direção",
                     "type": "Value",
-                    "id": "f77a515f-9864-43bb-9bdd-5ca0f4647c1a",
-                    "expectedControlType": "",
+                    "id": "279df0e0-afe4-4a3e-8e0e-a1e624f5bb90",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -193,15 +129,59 @@
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "9b99a798-d356-45fa-a793-f8466fafa5b9",
-                    "path": "<Keyboard>/f3",
+                    "name": "2D Vector",
+                    "id": "0d41cca1-ee99-459b-bcb8-18acd95e01eb",
+                    "path": "2DVector",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
-                    "isComposite": false,
+                    "action": "direção",
+                    "isComposite": true,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "42ebcb9f-d528-4ab3-98da-05c68172d213",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "direção",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "1da9f7b7-d58b-4432-9a54-71f6577628b0",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "direção",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "54beda4a-9d7e-4866-acb6-27be18a90dbf",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "direção",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "0819fa83-e1c9-4e9d-8f18-2bfc9a9350b1",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "direção",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }
