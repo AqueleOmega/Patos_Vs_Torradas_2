@@ -29,7 +29,6 @@ public class menuDebug : MonoBehaviour
         float fps = 1.0f / deltaTime;
         fpsText.text = string.Format("FPS: {0}", fps);
         localização.text = string.Format("X: {0}, Y: {0}", posori.x, posori.y);
-        //if ()
         texto3.text = string.Format("X: {0}, Y: {0}", balas.x, balas.y);
     }
 

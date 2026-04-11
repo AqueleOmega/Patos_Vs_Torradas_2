@@ -23,6 +23,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "debug",
+                    "type": "Button",
+                    "id": "6bee87cc-21bf-4bb0-b29e-c3eae319c196",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -190,6 +199,17 @@
                     "action": "movimentação bala",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "463840c1-ebc7-4f49-ae6e-0d9412a333bc",
+                    "path": "<Keyboard>/f3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "debug",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
