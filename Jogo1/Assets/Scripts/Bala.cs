@@ -19,33 +19,36 @@ public class Bala : MonoBehaviour
     bool canShot = true;
     public float angulo;
     public float cooldown = 2f;
-    public Vector2 input;
+    Vector2 input;
+    Vector2 input_usado;
 
-    public void Movimentar_Bala(InputAction.CallbackContext contexto)
+
+    public void Direção(InputAction.CallbackContext contexto)
     {
         input = contexto.ReadValue<Vector2>();
-
+        Debug.Log(input);
     }
 
     void Update()
     {
+        Debug.Log(input);
         posiçãoJogador = transJogador.position;
-        if (canShot)
+        if (canShot == true)
         {
             angulo = Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg;
-            transform.localRotation = Quaternion.Euler(0, 0,angulo);
+            transform.localRotation = Quaternion.Euler(0, 0, angulo);
         }
-        Debug.Log(input);
-        Debug.Log("Oi");
     }
 
     public void Atirar()
     {
-
-        if (canShot)
+        if (canShot == true)
         {
+            Debug.Log("Pode atirar");
+            Debug.Log(input);
             if (input != new Vector2(0,0))
             {
+                Debug.Log("tirando");
                 canShot = false;
                 GameObject novaBala = Instantiate(bala, transform.position, Quaternion.identity);
                 transform.position = posiçãoJogador;
