@@ -417,7 +417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
       propertyPath: m_ActionEvents.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_ActionId
@@ -429,7 +429,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
       propertyPath: m_ActionEvents.Array.data[3].m_ActionId
-      value: f77a515f-9864-43bb-9bdd-5ca0f4647c1a
+      value: 9cf877d9-99de-451d-a8b1-cbba660c3fc8
       objectReference: {fileID: 0}
     - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_ActionName
@@ -441,7 +441,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
       propertyPath: m_ActionEvents.Array.data[3].m_ActionName
-      value: 'DEBUG/New action[/Keyboard/f3]'
+      value: "movimenta\xE7\xE3o/dire\xE7\xE3o[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]"
       objectReference: {fileID: 0}
     - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.size
@@ -449,6 +449,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
       propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
@@ -460,6 +464,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1571665762}
@@ -468,11 +476,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7820512687440168581, guid: 72e97b50af1fc8c49b757ed462b19214, type: 3}
     - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1571665762}
+    - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
       propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
@@ -484,6 +500,10 @@ PrefabInstance:
       value: Movimentar
       objectReference: {fileID: 0}
     - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: "Dire\xE7\xE3o"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Bala, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -492,11 +512,19 @@ PrefabInstance:
       value: Bala, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Bala, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
       propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6912532702482536014, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}

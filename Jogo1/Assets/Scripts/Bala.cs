@@ -23,23 +23,17 @@ public class Bala : MonoBehaviour
     Vector2 input_usado;
 
 
-    public void Movimentar(InputAction.CallbackContext contexto)
+    public void Direção(InputAction.CallbackContext contexto)
     {
-        if (contexto.performed)
-        {
-            input = contexto.ReadValue<Vector2>();
-            input_usado = new Vector2(input.x, input.y);
-
-        }
-        
+        input = contexto.ReadValue<Vector2>();
+        Debug.Log(input);
     }
 
     void Update()
     {
-        posiçãoJogador = transJogador.position;
         Debug.Log(input);
-        Debug.Log(input_usado);
-        if (canShot)
+        posiçãoJogador = transJogador.position;
+        if (canShot == true)
         {
             angulo = Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg;
             transform.localRotation = Quaternion.Euler(0, 0, angulo);
@@ -48,7 +42,7 @@ public class Bala : MonoBehaviour
     
     public void Atirar()
     {
-        if (canShot)
+        if (canShot == true)
         {
             Debug.Log("Pode atirar");
             Debug.Log(input);

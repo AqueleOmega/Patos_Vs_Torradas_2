@@ -7,9 +7,18 @@
             "id": "52c1b11a-7eb3-429e-96e4-ceaa19e4ebb6",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "mover",
                     "type": "Value",
                     "id": "793cbc1e-42bf-4403-8f37-bcb9e67296e6",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "direção",
+                    "type": "Value",
+                    "id": "9cf877d9-99de-451d-a8b1-cbba660c3fc8",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
@@ -24,7 +33,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "mover",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -35,7 +44,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "mover",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -46,7 +55,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "mover",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -57,7 +66,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "mover",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -68,7 +77,62 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "mover",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "2D Vector",
+                    "id": "f2401ae7-19e2-4f4c-91b2-5658df075974",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "direção",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "b825ba0d-373a-4f4d-9b49-11dd1f865741",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "direção",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "24a5b1cd-3bc1-4f2a-b052-dd7ca0f7eb2d",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "direção",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "cc4cf003-bbdc-4d11-bf4c-f2fd2c7a16e3",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "direção",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "bc1c6800-6446-4bbf-93d2-ea37d13f1b5c",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "direção",
                     "isComposite": false,
                     "isPartOfComposite": true
                 }
