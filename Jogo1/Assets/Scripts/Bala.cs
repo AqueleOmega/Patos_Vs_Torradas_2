@@ -14,44 +14,45 @@ public class Bala : MonoBehaviour
     public Transform transBala;
     public GameObject bala;
     public Rigidbody2D tiro;
-    Vector2 posiçãoJogador;
+    Vector2 posiçaoJogador;
     public float velocidade = 1f;
     bool canShot = true;
-    public float angulo;
+    float angulo;
     public float cooldown = 2f;
     Vector2 input;
     Vector2 input_usado;
 
 
+    public void Start(){
+        Invoke(nameof(Rotation), 2.0f);
+    }
+
     public void Direção(InputAction.CallbackContext contexto)
     {
         input = contexto.ReadValue<Vector2>();
-        Debug.Log(input);
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        Debug.Log(input);
-        posiçãoJogador = transJogador.position;
-        if (canShot == true)
-        {
-            angulo = Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg;
-            transform.localRotation = Quaternion.Euler(0, 0, angulo);
-        }
+        posiçaoJogador = transJogador.position;
+    }
+
+    void Rotation(){
+        
     }
     
     public void Atirar()
     {
         if (canShot == true)
         {
-            Debug.Log("Pode atirar");
-            Debug.Log(input);
             if (input != new Vector2(0,0))
             {
                 Debug.Log("tirando");
                 canShot = false;
+                angulo = Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg;
+                transform.localRotation = Quaternion.Euler(0, 0, angulo);
                 GameObject novaBala = Instantiate(bala, transform.position, Quaternion.identity);
-                transform.position = posiçãoJogador;
+                transform.position = posiçaoJogador;
                 Bala script = novaBala.GetComponent<Bala>();
                 var sr = novaBala.GetComponent<SpriteRenderer>();
                 sr.enabled = true;
