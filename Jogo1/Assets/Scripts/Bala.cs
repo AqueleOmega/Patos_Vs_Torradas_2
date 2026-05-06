@@ -10,21 +10,26 @@ using UnityEngine.Windows;
 
 public class Bala : MonoBehaviour
 {
+    //transform do jogador e da bala
     public Transform transJogador;
     public Transform transBala;
+    //objeto da bala e da cabeça
     public GameObject bala;
+    public GameObject corpo;
+    
     public Rigidbody2D tiro;
+
+    Vector2 input;
     Vector2 posiçaoJogador;
+
     public float velocidade = 1f;
     bool canShot = true;
     float angulo;
     public float cooldown = 2f;
-    Vector2 input;
-    Vector2 input_usado;
 
 
     public void Start(){
-        Invoke(nameof(Rotation), 2.0f);
+        
     }
 
     public void Direção(InputAction.CallbackContext contexto)
@@ -35,10 +40,8 @@ public class Bala : MonoBehaviour
     void FixedUpdate()
     {
         posiçaoJogador = transJogador.position;
-    }
-
-    void Rotation(){
-        
+        angulo = Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg;
+        corpo.localRotation = Quaternion.Euler(0, 0, angulo);
     }
 
     public void Atirar()
@@ -49,8 +52,10 @@ public class Bala : MonoBehaviour
             {
                 Debug.Log("tirando");
                 canShot = false;
+                //parte que mexe na rotação
                 angulo = Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg;
                 transform.localRotation = Quaternion.Euler(0, 0, angulo);
+
                 GameObject novaBala = Instantiate(bala, transform.position, Quaternion.identity);
                 transform.position = posiçaoJogador;
                 Bala script = novaBala.GetComponent<Bala>();
