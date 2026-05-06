@@ -13,9 +13,9 @@ public class Bala : MonoBehaviour
     //transform do jogador e da bala
     public Transform transJogador;
     public Transform transBala;
+    
     //objeto da bala e da cabeça
     public GameObject bala;
-    public GameObject corpo;
     
     public Rigidbody2D tiro;
 
@@ -40,8 +40,6 @@ public class Bala : MonoBehaviour
     void FixedUpdate()
     {
         posiçaoJogador = transJogador.position;
-        angulo = Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg;
-        corpo.localRotation = Quaternion.Euler(0, 0, angulo);
     }
 
     public void Atirar()
