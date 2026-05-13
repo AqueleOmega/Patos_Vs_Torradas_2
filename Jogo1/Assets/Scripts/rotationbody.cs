@@ -15,7 +15,6 @@ public class rotationbody : MonoBehaviour
     
     void FixedUpdate()
     {
-        Debug.Log(input);
         angulo = Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg;
         if (angulo != 0){
             cabeça.localRotation = Quaternion.Euler(0, 0, angulo);

@@ -14,7 +14,7 @@ public class Bala : MonoBehaviour
     public Transform transJogador;
     public Transform transBala;
     
-    //objeto da bala e da cabeça
+    //objeto da bala
     public GameObject bala;
     
     public Rigidbody2D tiro;
@@ -48,7 +48,6 @@ public class Bala : MonoBehaviour
         {
             if (input != new Vector2(0,0))
             {
-                Debug.Log("tirando");
                 canShot = false;
                 //parte que mexe na rotação
                 angulo = Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg;
@@ -75,5 +74,13 @@ public class Bala : MonoBehaviour
     {
         tiro.linearVelocity = input * velocidade;
         yield return null;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bala"))
+        {
+            Destroy(bala);
+        }
     }
 }

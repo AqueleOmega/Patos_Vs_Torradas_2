@@ -11,7 +11,7 @@ public class movimentação : MonoBehaviour
     bool movendoy = false;
     
     public float friction = 0.98f;
-    public float angulo;
+    float angulo;
 
     public void Start()
     {
