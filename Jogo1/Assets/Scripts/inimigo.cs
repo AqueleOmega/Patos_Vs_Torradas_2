@@ -21,6 +21,7 @@ public class inimigo : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bala"))
         {
+            collision.transform.position = new Vector3(0, 1000, 0);
             vida -= 1;
             Debug.Log(vida);
         }
