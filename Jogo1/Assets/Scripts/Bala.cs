@@ -14,10 +14,14 @@ public class Bala : MonoBehaviour
     public Transform transJogador;
     public Transform transBala;
     
+    public Collider2D player_col;
+    public Collider2D bala_col;
     //objeto da bala
     public GameObject bala;
     
     public Rigidbody2D tiro;
+
+    public script Script2;
 
     Vector2 input;
     Vector2 posiçaoJogador;
@@ -40,6 +44,7 @@ public class Bala : MonoBehaviour
     void FixedUpdate()
     {
         posiçaoJogador = transJogador.position;
+        Script2 = GetComponent<Script2>();
     }
 
     public void Atirar()
@@ -52,28 +57,17 @@ public class Bala : MonoBehaviour
                 //parte que mexe na rotação
                 angulo = Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg;
                 transform.localRotation = Quaternion.Euler(0, 0, angulo);
-
+                Physics2D.IgnoreCollision(player_col, bala_col);
                 GameObject novaBala = Instantiate(bala, transform.position, Quaternion.identity);
-                transform.position = posiçaoJogador;
-                Bala script = novaBala.GetComponent<Bala>();
+                transform.position = new Vector3 (posiçaoJogador.x, posiçaoJogador.y, 0);
+                Script2 script = novaBala.GetComponent<Script2>();
                 var sr = novaBala.GetComponent<SpriteRenderer>();
                 sr.enabled = true;
+
                 script.StartCoroutine(Andar());
                 script.StartCoroutine(Esperar(cooldown, novaBala));
             }
         }
-    }
-
-    IEnumerator Esperar(float x,  GameObject bala)
-    {
-        yield return new WaitForSeconds(x);
-        canShot = true;
-        Destroy(bala);
-    }
-    private IEnumerator Andar()
-    {
-        tiro.linearVelocity = input * velocidade;
-        yield return null;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
