@@ -4,6 +4,7 @@ using TMPro;
 
 public class menuDebug : MonoBehaviour
 {
+    /*
     public TextMeshProUGUI fpsText;
     public TextMeshProUGUI localizacao;
     public TextMeshProUGUI texto3;
@@ -51,4 +52,5 @@ public class menuDebug : MonoBehaviour
         }
                 
     }
+    */
 }
