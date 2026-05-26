@@ -6,7 +6,7 @@ public class parede : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bala"))
         {
-            collision.transform.position = new Vector3(0, 1000, 0);
+            //collision.transform.position = new Vector3(0, 1000, 0);
         }
     }
 }
