@@ -71,9 +71,6 @@ public class movimentação : MonoBehaviour
         angulo = Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, angulo);
 
-        //vida player
-        slidervida.value = vida;
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
