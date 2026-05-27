@@ -1,6 +1,7 @@
 using JetBrains.Annotations;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Rendering;
 using UnityEngine.Video;
 using static UnityEngine.GraphicsBuffer;
@@ -15,6 +16,7 @@ public class inimigo : MonoBehaviour
     public Transform jogador;
     bool atk1;
     public float strengh1;
+    public Slider sliderboss;
 
     void Start()
     {
@@ -39,6 +41,12 @@ public class inimigo : MonoBehaviour
         {
             StartCoroutine(Ataque_base());
         }
+
+        sliderboss.value = vida;
+        if (vida <= 0)
+        {
+            gameObject.transform.position = new Vector2(0, 100);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -46,7 +54,6 @@ public class inimigo : MonoBehaviour
         if (collision.gameObject.CompareTag("Bala"))
         {
             vida -= 1;
-            Debug.Log(vida);
         }
         if (collision.gameObject.CompareTag("Parede"))
         {

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class movimentação : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class movimentação : MonoBehaviour
     
     public float friction = 0.98f;
     float angulo;
+
+    public Slider slidervida;
+    public float vida = 10f;
 
     public void Start()
     {
@@ -66,9 +70,24 @@ public class movimentação : MonoBehaviour
         // rotação corpo
         angulo = Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, angulo);
+
+        //vida player
+        slidervida.value = vida;
+
     }
 
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            vida -= 1;
+            slidervida.value = vida;
+            if (vida <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
 
 
 }
