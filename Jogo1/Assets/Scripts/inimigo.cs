@@ -30,13 +30,15 @@ public class inimigo : MonoBehaviour
 
         if (atk1 == false)
         {
+            
             Vector2 direcao = jogador.position - transform.position;
             float angulo = Mathf.Atan2(direcao.y, direcao.x) * Mathf.Rad2Deg;
 
             transform.eulerAngles = new Vector3(0, 0, angulo);
+            
         }
 
-
+        // Isso tá rodando todo frame
         if (tempoAtual > tempoTotal)
         {
             StartCoroutine(Ataque_base());

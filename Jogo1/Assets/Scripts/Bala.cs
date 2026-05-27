@@ -83,6 +83,9 @@ public class Bala : MonoBehaviour
                 BalaInstanciada ScriptInstanciada = novaBala.GetComponent<BalaInstanciada>();
                 ScriptInstanciada.enabled = true;
 
+                angulo = Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg;
+                novaBala.transform.localRotation = Quaternion.Euler(0, 0, angulo);
+
                 bala_col = novaBala.GetComponent<Collider2D>();
                 Physics2D.IgnoreCollision(player_col, bala_col);
 
