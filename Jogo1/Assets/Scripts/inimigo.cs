@@ -15,8 +15,13 @@ public class inimigo : MonoBehaviour
     inimigo script;
     public Transform jogador;
     bool atk1;
+    bool atk;
+    bool atk2;
     public float strengh1;
+    public float strenght2;
     public Slider sliderboss;
+    public Sprite sprite;
+
 
     void Start()
     {
@@ -41,7 +46,8 @@ public class inimigo : MonoBehaviour
         // Isso tá rodando todo frame
         if (tempoAtual > tempoTotal)
         {
-            StartCoroutine(Ataque_base());
+            StartCoroutine(Pulo());
+            //StartCoroutine(Ataque_base());
         }
 
         sliderboss.value = vida;
@@ -59,14 +65,21 @@ public class inimigo : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Parede"))
         {
-            atk1 = false;
-            StopCoroutine(Ataque_base());
-            rb.linearVelocity = Vector2.zero;
+            if (atk1 == true){
+                atk = false;
+                atk1 = false;
+                StopCoroutine(Ataque_base());
+                rb.linearVelocity = Vector2.zero;
+            }
+            if(atk2 == true){
+                
+            }
         }
     }
 
     IEnumerator Ataque_base()
     {
+        atk = true;
         atk1 = true;
         while (atk1 == true)
         {
@@ -75,4 +88,22 @@ public class inimigo : MonoBehaviour
         }
         tempoAtual = 0f;
     }
+
+    IEnumerator Pulo()
+    {
+        atk = true;
+        atk2 = true;
+        bool parte1 = true;
+        Vector3 scale = transform.localScale;
+        while (parte1 = true && transform.localScale != new Vector3(0,0,0))
+        {
+            transform.localScale = transform.localScale - new Vector3(strenght2,strenght2,strenght2);
+            yield return new WaitForFixedUpdate();
+        }
+        parte1 = false;
+        Debug.Log("era pra ter acabado");
+        yield return new WaitForSeconds(0.4f);
+        transform.localScale = scale;
+    }
+
 }
