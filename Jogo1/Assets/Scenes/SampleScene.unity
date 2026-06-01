@@ -2638,7 +2638,8 @@ MonoBehaviour:
   vida: 20
   jogador: {fileID: 1250067005}
   strengh1: 2
-  strenght2: 0.005
+  strenght2: 0.04
+  strenght3: 1
   sliderboss: {fileID: 2032842503}
   sprite: {fileID: 0}
 --- !u!50 &1932222921

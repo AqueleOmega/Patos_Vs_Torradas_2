@@ -17,8 +17,11 @@ public class inimigo : MonoBehaviour
     bool atk1;
     bool atk;
     bool atk2;
+    bool atk3 = false;
+    bool pulo = false;
     public float strengh1;
     public float strenght2;
+    public float strenght3;
     public Slider sliderboss;
     public Sprite sprite;
 
@@ -46,7 +49,12 @@ public class inimigo : MonoBehaviour
         // Isso tá rodando todo frame
         if (tempoAtual > tempoTotal)
         {
-            StartCoroutine(Pulo());
+            if (atk2 == false){
+                //StartCoroutine(Pulo());
+            }
+            if (atk3 == false) {
+                StartCoroutine(Pursuit());
+            }
             //StartCoroutine(Ataque_base());
         }
 
@@ -72,7 +80,10 @@ public class inimigo : MonoBehaviour
                 rb.linearVelocity = Vector2.zero;
             }
             if(atk2 == true){
-                
+                rb.linearVelocity = Vector2.zero;
+            }
+            if (atk3 = true){
+                rb.linearVelocity = Vector2.zero;
             }
         }
     }
@@ -94,6 +105,8 @@ public class inimigo : MonoBehaviour
         atk = true;
         atk2 = true;
         bool parte1 = true;
+        bool parte2 = false;
+        float tempo_2 = 0;
         Vector3 scale = transform.localScale;
         while (parte1 = true && transform.localScale != new Vector3(0,0,0))
         {
@@ -101,9 +114,35 @@ public class inimigo : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
         parte1 = false;
+        parte2 = true;
         Debug.Log("era pra ter acabado");
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(1f);
+        //trocar sprite
         transform.localScale = scale;
+
+        while (parte2 == true && strenght3 <= 10f)
+        {
+            rb.AddForce(transform.right * strenght3);
+            strenght3 += 0.01f;
+            yield return new WaitForFixedUpdate();
+            
+        }
+        yield return null;
+        
+    }
+
+    IEnumerator Pursuit()
+    {
+        atk3 = true;
+        while (strenght3 <= 10f)
+        {
+            rb.AddForce(transform.right * strenght3);
+            strenght3 += 0.01f;
+            yield return new WaitForFixedUpdate();
+            
+        }
+        atk3 = false;
+        yield return null;
     }
 
 }
