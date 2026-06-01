@@ -22,6 +22,7 @@ public class inimigo : MonoBehaviour
     public float strengh1;
     public float strenght2;
     public float strenght3;
+    public float aproximation;
     public Slider sliderboss;
     public Sprite sprite;
 
@@ -50,10 +51,10 @@ public class inimigo : MonoBehaviour
         if (tempoAtual > tempoTotal)
         {
             if (atk2 == false){
-                //StartCoroutine(Pulo());
+                StartCoroutine(Pulo());
             }
             if (atk3 == false) {
-                StartCoroutine(Pursuit());
+                //StartCoroutine(Pursuit());
             }
             //StartCoroutine(Ataque_base());
         }
@@ -106,7 +107,10 @@ public class inimigo : MonoBehaviour
         atk2 = true;
         bool parte1 = true;
         bool parte2 = false;
+        bool parte3 = false;
         float tempo_2 = 0;
+        float tempo_3 = 0;
+
         Vector3 scale = transform.localScale;
         while (parte1 = true && transform.localScale != new Vector3(0,0,0))
         {
@@ -120,13 +124,18 @@ public class inimigo : MonoBehaviour
         //trocar sprite
         transform.localScale = scale;
 
-        while (parte2 == true && strenght3 <= 10f)
+
+        while (parte2 == true && tempo_3 <= 3f)
         {
-            rb.AddForce(transform.right * strenght3);
-            strenght3 += 0.01f;
+            
+            transform.position = Vector2.MoveTowards(transform.position, jogador.position, aproximation * Time.deltaTime);
+            tempo_3 += 0.01f * Time.deltaTime;
             yield return new WaitForFixedUpdate();
             
+            
         }
+        parte2 = false;
+        parte3 = true;
         yield return null;
         
     }

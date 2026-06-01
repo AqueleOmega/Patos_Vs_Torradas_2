@@ -2616,7 +2616,7 @@ Transform:
   m_GameObject: {fileID: 1932222915}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.43, y: -2.89, z: 0}
+  m_LocalPosition: {x: 6.42, y: -1.97, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2640,6 +2640,7 @@ MonoBehaviour:
   strengh1: 2
   strenght2: 0.04
   strenght3: 1
+  aproximation: 14
   sliderboss: {fileID: 2032842503}
   sprite: {fileID: 0}
 --- !u!50 &1932222921
