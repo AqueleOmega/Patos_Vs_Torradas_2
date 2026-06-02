@@ -1,9 +1,10 @@
 using JetBrains.Annotations;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Rendering;
+using UnityEngine.UI;
 using UnityEngine.Video;
+using UnityEngine.Windows;
 using static UnityEngine.GraphicsBuffer;
 
 public class inimigo : MonoBehaviour
@@ -26,16 +27,16 @@ public class inimigo : MonoBehaviour
     public float strenght3;
     public float aproximation;
     public Slider sliderboss;
-    public Sprite sprite;
-    Sprite quadrado;
-    public SpriteRenderer sr; 
+    public Sprite alvo;
+    public Sprite quadrado;
+    public SpriteRenderer sr;
+    public GameObject bala_copia;
 
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
-        //Sprite quadrado = sr.sprite;
     }
 
     // Update is called once per frame
@@ -57,10 +58,9 @@ public class inimigo : MonoBehaviour
         // Isso tá rodando todo frame
         if (tempoAtual > tempoTotal && atk == false)
         {
-            int escolha;
+            int escolha = 0;
             escolha = Random.Range(1,4);
             Debug.Log(escolha);
-
             if (escolha == 1)
             {
                 StartCoroutine(Ataque_base());
@@ -129,6 +129,7 @@ public class inimigo : MonoBehaviour
         bool parte3 = false;
         float tempo_2 = 0;
         float tempo_3 = 0;
+        float tempo_4 = 0;
 
         Vector3 scale = transform.localScale;
         while (parte1 = true && transform.localScale != new Vector3(0,0,0))
@@ -136,6 +137,7 @@ public class inimigo : MonoBehaviour
             transform.localScale = transform.localScale - new Vector3(strenght2,strenght2,strenght2);
             yield return new WaitForFixedUpdate();
         }
+        sr.sprite = alvo;
         parte1 = false;
         parte2 = true;
 
@@ -154,15 +156,24 @@ public class inimigo : MonoBehaviour
             
         }
         tempo_3 = 0;
-
-        yield return new WaitForSeconds(1f);
-
-        //sr.sprite = quadrado;
+        Debug.Log("oi");
+        Debug.Log(tempo_4);
+        while (tempo_4 <= 1f)
+        {
+            tempo_4 += Time.deltaTime;
+            yield return new WaitForFixedUpdate();
+        }
+        Debug.Log("Tchau");
+        tempo_4 = 0;
+        sr.sprite = quadrado;
         C2D.enabled = true;
         parte2 = false;
         parte3 = true;
 
         tempoAtual = 0f;
+
+        parte3 = false;
+
         atk = false;
         atk2 = false;
         yield return null;
@@ -173,6 +184,7 @@ public class inimigo : MonoBehaviour
     {
         atk = true;
         atk3 = true;
+        float antigo = strenght3;
         while (strenght3 <= 10f)
         {
             rb.AddForce(transform.right * strenght3);
@@ -183,8 +195,8 @@ public class inimigo : MonoBehaviour
         atk3 = false;
         atk = false;
         tempoAtual = 0f;
+        strenght3 = antigo;
         rb.linearVelocity = new Vector2(0, 0);
         yield return null;
     }
-
 }

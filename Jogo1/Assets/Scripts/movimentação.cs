@@ -17,6 +17,8 @@ public class movimentação : MonoBehaviour
     public Slider slidervida;
     public float vida = 10f;
 
+    float tempo = 0;
+
     public void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -85,6 +87,17 @@ public class movimentação : MonoBehaviour
             }
         }
     }
-
-
+    void OnTriggerStay2D(Collider2D collider)
+    {
+        if (collider.gameObject.CompareTag("Enemy"))
+        {
+            tempo += Time.deltaTime;
+            if (tempo >= 1f)
+            {
+                vida -= 1;
+                slidervida.value = vida;
+                tempo = 0f;
+            }
+        }
+    }
 }

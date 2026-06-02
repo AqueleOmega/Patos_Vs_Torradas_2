@@ -1296,6 +1296,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1140728648 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3534633453966876741, guid: 72e97b50af1fc8c49b757ed462b19214, type: 3}
+  m_PrefabInstance: {fileID: 4869670459491255895}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1210197782
 GameObject:
   m_ObjectHideFlags: 0
@@ -2079,7 +2084,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7820512687440168581, guid: 72e97b50af1fc8c49b757ed462b19214, type: 3}
   m_PrefabInstance: {fileID: 4869670459491255895}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1140728648}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ca7caac3d0c1c64eb1caa40c4e633c1, type: 3}
@@ -2596,7 +2601,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 73ef9d7b126a5664a8172f772031b3f9, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2615,7 +2620,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1932222915}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.42, y: -1.97, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
@@ -2641,10 +2646,12 @@ MonoBehaviour:
   strengh1: 2
   strenght2: 0.04
   strenght3: 1
-  aproximation: 14
+  aproximation: 6.7
   sliderboss: {fileID: 2032842503}
-  sprite: {fileID: 4124813594370836823, guid: 0f55a1603fd10aa45b3ec2148533d92d, type: 3}
+  alvo: {fileID: 5314479025228400251, guid: 23fe107bb97b2bb4487d349368312a57, type: 3}
+  quadrado: {fileID: 7482667652216324306, guid: 73ef9d7b126a5664a8172f772031b3f9, type: 3}
   sr: {fileID: 1932222918}
+  bala_copia: {fileID: 1140728648}
 --- !u!50 &1932222921
 Rigidbody2D:
   serializedVersion: 5
