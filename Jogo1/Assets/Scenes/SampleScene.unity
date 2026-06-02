@@ -2636,7 +2636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1932222921}
   C2D: {fileID: 1932222917}
-  vida: 20
+  vida: 50
   jogador: {fileID: 1250067005}
   strengh1: 2
   strenght2: 0.04
@@ -2734,9 +2734,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 20
+  m_MaxValue: 50
   m_WholeNumbers: 0
-  m_Value: 20
+  m_Value: 50
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
