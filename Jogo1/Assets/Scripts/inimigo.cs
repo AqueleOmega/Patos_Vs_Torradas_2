@@ -9,6 +9,7 @@ using static UnityEngine.GraphicsBuffer;
 public class inimigo : MonoBehaviour
 {
     public Rigidbody2D rb;
+    public Collider2D C2D;
     public float vida;
     float tempoAtual = 0f;
     float tempoTotal = 3f;
@@ -17,6 +18,7 @@ public class inimigo : MonoBehaviour
     bool atk1;
     bool atk;
     bool atk2;
+    bool parte2 = false;
     bool atk3 = false;
     bool pulo = false;
     public float strengh1;
@@ -25,19 +27,24 @@ public class inimigo : MonoBehaviour
     public float aproximation;
     public Slider sliderboss;
     public Sprite sprite;
+    Sprite quadrado;
+    public SpriteRenderer sr; 
 
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
+        //Sprite quadrado = sr.sprite;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        
         tempoAtual += Time.deltaTime;
 
-        if (atk1 == false)
+        if (atk1 == false && parte2 == false)
         {
             
             Vector2 direcao = jogador.position - transform.position;
@@ -48,15 +55,24 @@ public class inimigo : MonoBehaviour
         }
 
         // Isso tá rodando todo frame
-        if (tempoAtual > tempoTotal)
+        if (tempoAtual > tempoTotal && atk == false)
         {
-            if (atk2 == false){
+            int escolha;
+            escolha = Random.Range(1,4);
+            Debug.Log(escolha);
+
+            if (escolha == 1)
+            {
+                StartCoroutine(Ataque_base());
+            }
+            if (escolha == 2)
+            {
                 StartCoroutine(Pulo());
             }
-            if (atk3 == false) {
-                //StartCoroutine(Pursuit());
+            if (escolha == 3)
+            {
+                StartCoroutine(Pursuit());
             }
-            //StartCoroutine(Ataque_base());
         }
 
         sliderboss.value = vida;
@@ -83,7 +99,7 @@ public class inimigo : MonoBehaviour
             if(atk2 == true){
                 rb.linearVelocity = Vector2.zero;
             }
-            if (atk3 = true){
+            if (atk3 == true){
                 rb.linearVelocity = Vector2.zero;
             }
         }
@@ -99,6 +115,9 @@ public class inimigo : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
         tempoAtual = 0f;
+        atk = false;
+        atk1 = false;
+        yield return null;
     }
 
     IEnumerator Pulo()
@@ -119,29 +138,40 @@ public class inimigo : MonoBehaviour
         }
         parte1 = false;
         parte2 = true;
-        Debug.Log("era pra ter acabado");
+
+        
         yield return new WaitForSeconds(1f);
-        //trocar sprite
         transform.localScale = scale;
+        C2D.enabled = false;
 
-
-        while (parte2 == true && tempo_3 <= 3f)
+        while (tempo_3 <= 3f)
         {
             
             transform.position = Vector2.MoveTowards(transform.position, jogador.position, aproximation * Time.deltaTime);
-            tempo_3 += 0.01f * Time.deltaTime;
+            tempo_3 += 1f * Time.deltaTime;
             yield return new WaitForFixedUpdate();
             
             
         }
+        tempo_3 = 0;
+
+        yield return new WaitForSeconds(1f);
+
+        //sr.sprite = quadrado;
+        C2D.enabled = true;
         parte2 = false;
         parte3 = true;
+
+        tempoAtual = 0f;
+        atk = false;
+        atk2 = false;
         yield return null;
         
     }
 
     IEnumerator Pursuit()
     {
+        atk = true;
         atk3 = true;
         while (strenght3 <= 10f)
         {
@@ -151,6 +181,9 @@ public class inimigo : MonoBehaviour
             
         }
         atk3 = false;
+        atk = false;
+        tempoAtual = 0f;
+        rb.linearVelocity = new Vector2(0, 0);
         yield return null;
     }
 

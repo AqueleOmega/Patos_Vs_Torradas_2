@@ -2635,6 +2635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1932222921}
+  C2D: {fileID: 1932222917}
   vida: 20
   jogador: {fileID: 1250067005}
   strengh1: 2
@@ -2642,7 +2643,8 @@ MonoBehaviour:
   strenght3: 1
   aproximation: 14
   sliderboss: {fileID: 2032842503}
-  sprite: {fileID: 0}
+  sprite: {fileID: 4124813594370836823, guid: 0f55a1603fd10aa45b3ec2148533d92d, type: 3}
+  sr: {fileID: 1932222918}
 --- !u!50 &1932222921
 Rigidbody2D:
   serializedVersion: 5

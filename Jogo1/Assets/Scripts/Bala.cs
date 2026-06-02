@@ -52,6 +52,7 @@ public class Bala : MonoBehaviour
     void FixedUpdate()
     {
         posiçaoJogador = transJogador.position;
+        Atirar();
         //Debug.Log(input);
         /*
         if (canShot == false)
