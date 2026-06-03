@@ -70,8 +70,10 @@ public class movimentação : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * friction);
         }
         // rotação corpo
+        /*
         angulo = Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, angulo);
+        */
 
     }
 

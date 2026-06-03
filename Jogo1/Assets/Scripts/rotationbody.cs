@@ -15,11 +15,12 @@ public class rotationbody : MonoBehaviour
     
     void FixedUpdate()
     {
+        /*
         angulo = Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg;
         if (angulo != 0){
             cabeça.localRotation = Quaternion.Euler(0, 0, angulo);
-        }
-        cabeça.localPosition = new Vector3(corpo.position.x, corpo.position.y, -0.01f);
+        }*/
+        cabeça.localPosition = new Vector3(corpo.position.x, corpo.position.y + 0.5f, -0.01f);
     }
 
 }
