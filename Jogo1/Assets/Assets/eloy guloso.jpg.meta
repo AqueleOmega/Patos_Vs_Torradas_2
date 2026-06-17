@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0f55a1603fd10aa45b3ec2148533d92d
+guid: 23dc8508dd837564aa0103d422264fde
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4124813594370836823
-    second: oias_0
+      213: -3176629327082967622
+    second: eloy guloso_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 285.3
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: oias_0
+      name: eloy guloso_0
       rect:
         serializedVersion: 2
-        x: 265
+        x: 0
         y: 0
-        width: 358
-        height: 350
+        width: 1600
+        height: 1600
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 3, y: 0, z: 0, w: 0}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7590d212c184e3930800000000000000
-      internalID: 4124813594370836823
+      spriteID: abda12025785ae3d0800000000000000
+      internalID: -3176629327082967622
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d237a38ac288af3488799f86f0518024
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      oias_0: 4124813594370836823
+      eloy guloso_0: -3176629327082967622
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
