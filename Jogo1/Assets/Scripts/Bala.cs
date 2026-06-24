@@ -20,6 +20,8 @@ public class Bala : MonoBehaviour
     public Rigidbody2D tiro;
     Rigidbody2D tiro_ins;
 
+    public Animator head;
+
     GameObject novaBala;
 
     Vector2 input;
@@ -29,7 +31,7 @@ public class Bala : MonoBehaviour
     Collider2D bala_col;
 
     public float velocidade = 1f;
-    bool canShot = true;
+    public bool canShot = true;
     float angulo;
     public float cooldown = 2f;
 
@@ -53,45 +55,52 @@ public class Bala : MonoBehaviour
     {
         posiçaoJogador = transJogador.position;
         Atirar();
-        //Debug.Log(input);
-        /*
-        if (canShot == false)
+        if (canShot == true)
         {
-            script.StartCoroutine(Esperar(cooldown));
+            head.SetBool("Direita", false);
         }
-        */
     }
 
     public void Atirar()
     {
         if (canShot == true)
         {
-            if (input != new Vector2(0,0))
+            if (input != new Vector2(0, 0))
             {
+                if (Input.GetKeyDown("space"))
+                {
+                    head.SetBool("Direita", true);
+                }
+                if (Input.GetKeyDown("space"))
+                {
+                    head.SetBool("Esquerda", true);
+                }
+                if (Input.GetKeyDown("space"))
+                {
+                    head.SetBool("Cima", true);
+                }
+                if (Input.GetKeyDown("space"))
+                {
+                    head.SetBool("Baixo", true);
+                }
                 canShot = false;
                 //parte que mexe na rotação
                 angulo = Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg;
-                transform.localRotation = Quaternion.Euler(0, 0, angulo);
-
                 //Instanciação da bala
                 novaBala = Instantiate(balax, transform.position, Quaternion.identity);
                 novaBala.transform.position = posiçaoJogador;
-
+                novaBala.transform.localRotation = Quaternion.Euler(0, 0, angulo);
                 //atribuimos o script atual ao objeto instanciado
                 Bala script = novaBala.GetComponent<Bala>();
-
                 //habilitamos uma outra script no objeto instanciado
                 BalaInstanciada ScriptInstanciada = novaBala.GetComponent<BalaInstanciada>();
                 ScriptInstanciada.enabled = true;
-
                 angulo = Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg;
                 novaBala.transform.localRotation = Quaternion.Euler(0, 0, angulo);
-
                 bala_col = novaBala.GetComponent<Collider2D>();
                 Physics2D.IgnoreCollision(player_col, bala_col);
 
                 tiro_ins = novaBala.GetComponent<Rigidbody2D>();
-
                 //coroutine
                 script.StartCoroutine(Andar(novaBala));
                 script.StartCoroutine(Esperar(cooldown, novaBala));

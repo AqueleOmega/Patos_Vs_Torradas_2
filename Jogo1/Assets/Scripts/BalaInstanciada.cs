@@ -4,12 +4,16 @@ using UnityEngine;
 public class BalaInstanciada : MonoBehaviour
 {
     Rigidbody2D rb;
+    GameObject player;
+    Bala script1;
+
 
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-
+        rb = GetComponent<Rigidbody2D>();   
+        GameObject player = GameObject.FindWithTag("Player");
+        Bala script1 = player.GetComponent<Bala>();
     }
 
     // Update is called once per frame
@@ -25,10 +29,14 @@ public class BalaInstanciada : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             transform.position = new Vector3(0, 1000, 0);
+            script1.canShot = true;
+            Destroy(gameObject);
         }
         if (collision.gameObject.CompareTag("Parede"))
         {
             transform.position = new Vector3(0, 1000, 0);
+            script1.canShot = true;
+            Destroy(gameObject);
         }
     }
 
