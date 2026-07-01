@@ -67,22 +67,6 @@ public class Bala : MonoBehaviour
         {
             if (input != new Vector2(0, 0))
             {
-                if (Input.GetKeyDown("space"))
-                {
-                    head.SetBool("Direita", true);
-                }
-                if (Input.GetKeyDown("space"))
-                {
-                    head.SetBool("Esquerda", true);
-                }
-                if (Input.GetKeyDown("space"))
-                {
-                    head.SetBool("Cima", true);
-                }
-                if (Input.GetKeyDown("space"))
-                {
-                    head.SetBool("Baixo", true);
-                }
                 canShot = false;
                 //parte que mexe na rotação
                 angulo = Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg;

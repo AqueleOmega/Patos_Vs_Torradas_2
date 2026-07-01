@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 113600403}
   - component: {fileID: 113600405}
   - component: {fileID: 113600406}
+  - component: {fileID: 113600407}
   m_Layer: 1
   m_Name: "cabe\xE7a"
   m_TagString: Untagged
@@ -229,6 +230,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &113600407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113600402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 039fe15ec262dc04889d0e878d237303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &199409396 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6912532702482536014, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
@@ -1527,7 +1540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
       propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.size
@@ -1546,6 +1559,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
       propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
@@ -1560,7 +1577,7 @@ PrefabInstance:
     - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 113600407}
     - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
       propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1575,6 +1592,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
@@ -1607,6 +1628,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlayerStateManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
       value: rotationbody, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6015947199351923772, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
@@ -1686,6 +1711,7 @@ MonoBehaviour:
   transBala: {fileID: 1583682095}
   balax: {fileID: 3534633453966876741, guid: 72e97b50af1fc8c49b757ed462b19214, type: 3}
   tiro: {fileID: 1583682094}
+  head: {fileID: 0}
   player_col: {fileID: 1250067006}
   velocidade: 30
   canShot: 1

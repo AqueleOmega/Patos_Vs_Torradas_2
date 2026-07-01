@@ -7,6 +7,7 @@ public class rotationbody : MonoBehaviour
    public Transform cabeça;
    public Transform corpo;
    float angulo;
+   public Animator head;
 
    public void Direção(InputAction.CallbackContext contexto)
     {
@@ -15,12 +16,16 @@ public class rotationbody : MonoBehaviour
     
     void FixedUpdate()
     {
-        /*
-        angulo = Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg;
-        if (angulo != 0){
-            cabeça.localRotation = Quaternion.Euler(0, 0, angulo);
-        }*/
-        cabeça.localPosition = new Vector3(corpo.position.x, corpo.position.y + 0.5f, -0.01f);
+        if (input.x > 0){
+            head.SetBool("Direita", true);
+            head.SetBool("Esquerda", false);
+        }
+        if (input.x < 0){
+            head.SetBool("Direita", false);
+            head.SetBool("Esquerda", true);
+        }
+
+        Debug.Log(input);
     }
 
 }
