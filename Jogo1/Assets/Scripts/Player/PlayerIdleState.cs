@@ -33,17 +33,17 @@ public class PlayerStateIdle : PlayerBaseState
         }
         if (player.input.x < 0)
         {
-            Debug.Log("menor que 0x");
+            player.SwitchState(player.EsquerdaState);
         }
 
         if(player.input.y > 0)
         {
-            Debug.Log("maior que 0y");
+            player.SwitchState(player.CimaState);
         }
 
         if (player.input.y < 0)
         {
-            Debug.Log("menor que 0y");
+            player.SwitchState(player.BaixoState);
         }
         
     

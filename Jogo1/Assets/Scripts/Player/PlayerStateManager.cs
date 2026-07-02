@@ -22,7 +22,12 @@ public class PlayerStateManager : MonoBehaviour
     // quanto mais criamos, mais states adicionamos aqui
 
     public DirPState DireitaState;
-    
+
+    public EsqPState EsquerdaState;
+
+    public CimPState CimaState;
+
+    public BaiPState BaixoState;
     
     // Aqui em baixo, os novos states do boss, agora desmembrado em 2.
     //public BossStatePrepAtaque PrepAtaqueState = new BossStatePrepAtaque();
@@ -42,7 +47,12 @@ public class PlayerStateManager : MonoBehaviour
     void Start()
     {
         IdleState = new PlayerStateIdle(head, this);
+
         DireitaState = new DirPState(head);
+        EsquerdaState = new EsqPState(head);
+        CimaState = new CimPState(head);
+        BaixoState = new BaiPState(head);
+
 
     // Ao iniciar nosso script, definimos o state do boss como Idle. 
     currentState = IdleState;
