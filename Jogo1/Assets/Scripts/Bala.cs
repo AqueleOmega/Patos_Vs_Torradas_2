@@ -20,8 +20,6 @@ public class Bala : MonoBehaviour
     public Rigidbody2D tiro;
     Rigidbody2D tiro_ins;
 
-    public Animator head;
-
     GameObject novaBala;
 
     Vector2 input;
@@ -53,12 +51,7 @@ public class Bala : MonoBehaviour
 
     void FixedUpdate()
     {
-        posiçaoJogador = transJogador.position;
         Atirar();
-        if (canShot == true)
-        {
-            head.SetBool("Direita", false);
-        }
     }
 
     public void Atirar()
@@ -67,6 +60,7 @@ public class Bala : MonoBehaviour
         {
             if (input != new Vector2(0, 0))
             {
+                posiçaoJogador = transJogador.position;
                 canShot = false;
                 //parte que mexe na rotação
                 angulo = Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg;

@@ -21,7 +21,6 @@ public class inimigo : MonoBehaviour
     bool atk2;
     bool parte2 = false;
     bool atk3 = false;
-    bool pulo = false;
     public float strengh1;
     public float strenght2;
     public float strenght3;
@@ -125,9 +124,6 @@ public class inimigo : MonoBehaviour
         atk = true;
         atk2 = true;
         bool parte1 = true;
-        bool parte2 = false;
-        bool parte3 = false;
-        float tempo_2 = 0;
         float tempo_3 = 0;
         float tempo_4 = 0;
 
@@ -139,7 +135,6 @@ public class inimigo : MonoBehaviour
         }
         sr.sprite = alvo;
         parte1 = false;
-        parte2 = true;
 
         
         yield return new WaitForSeconds(1f);
@@ -167,12 +162,9 @@ public class inimigo : MonoBehaviour
         tempo_4 = 0;
         sr.sprite = quadrado;
         C2D.enabled = true;
-        parte2 = false;
-        parte3 = true;
 
         tempoAtual = 0f;
 
-        parte3 = false;
 
         atk = false;
         atk2 = false;
