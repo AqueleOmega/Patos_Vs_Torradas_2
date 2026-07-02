@@ -3,13 +3,12 @@ using UnityEngine.InputSystem;
 
 public class PlayerStateManager : MonoBehaviour
 {
-    Vector2 input;
     public Animator head;
+    public Vector2 input;
 
     public void Direção(InputAction.CallbackContext contexto)
     {
         input = contexto.ReadValue<Vector2>();
-        Debug.Log(input);
     }
 
     // Aqui definimos o currentState, que espera um concrete state derivado do
@@ -21,8 +20,8 @@ public class PlayerStateManager : MonoBehaviour
     // Aqui nós estamos instanciando os nossos states e chamando eles de ---State
     // (ex.: IdleState, MoverState). Eles correspondem aos states que criamos,
     // quanto mais criamos, mais states adicionamos aqui
-    
-    public DirPState DireitaState = new DirPState();
+
+    public DirPState DireitaState;
     
     
     // Aqui em baixo, os novos states do boss, agora desmembrado em 2.
@@ -42,10 +41,11 @@ public class PlayerStateManager : MonoBehaviour
 
     void Start()
     {
-        IdleState = new PlayerStateIdle(input, head);
+        IdleState = new PlayerStateIdle(head, this);
+        DireitaState = new DirPState(head);
 
-        // Ao iniciar nosso script, definimos o state do boss como Idle. 
-        currentState = IdleState;
+    // Ao iniciar nosso script, definimos o state do boss como Idle. 
+    currentState = IdleState;
 
 
         // Depois de definir o state do boss como idle, rodamos a função "EnterState();

@@ -6,13 +6,13 @@ using System.Collections.Generic;
 public class PlayerStateIdle : PlayerBaseState
 {
 
-    Vector2 input;
     Animator head;
+    PlayerStateManager Script_Original;
 
-    public PlayerStateIdle(Vector2 input1, Animator head1)
+    public PlayerStateIdle(Animator head1, PlayerStateManager Script_Originals)
     {
-        this.input = input1;
         this.head = head1;
+        this.Script_Original = Script_Originals;
     }
     
 
@@ -25,11 +25,27 @@ public class PlayerStateIdle : PlayerBaseState
 
     public override void UpdateState(PlayerStateManager player)
     {
-        Debug.Log(input);
-        if (input.x > 0)
+        Debug.Log(player.input);
+        
+        if (player.input.x > 0)
         {
             player.SwitchState(player.DireitaState);
         }
+        if (player.input.x < 0)
+        {
+            Debug.Log("menor que 0x");
+        }
+
+        if(player.input.y > 0)
+        {
+            Debug.Log("maior que 0y");
+        }
+
+        if (player.input.y < 0)
+        {
+            Debug.Log("menor que 0y");
+        }
+        
     
     }
 

@@ -242,6 +242,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 039fe15ec262dc04889d0e878d237303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  head: {fileID: 113600406}
+  input: {x: 0, y: 0}
 --- !u!1 &199409396 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6912532702482536014, guid: 2383b8293373df44b9e36b5ce6505913, type: 3}
@@ -1711,7 +1713,6 @@ MonoBehaviour:
   transBala: {fileID: 1583682095}
   balax: {fileID: 3534633453966876741, guid: 72e97b50af1fc8c49b757ed462b19214, type: 3}
   tiro: {fileID: 1583682094}
-  head: {fileID: 0}
   player_col: {fileID: 1250067006}
   velocidade: 30
   canShot: 1
