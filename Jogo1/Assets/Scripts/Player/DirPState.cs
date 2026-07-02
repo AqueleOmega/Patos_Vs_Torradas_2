@@ -4,12 +4,12 @@ public class DirPState : PlayerBaseState
 {
     public override void EnterState(PlayerStateManager player)
     {
-        Debug.Log("OI");
+
     }
 
     public override void UpdateState(PlayerStateManager player)
     {
-        
+        Debug.Log("OI");
     }
 
     public override void OnCollisionEnter(PlayerStateManager player, Collision collision)
