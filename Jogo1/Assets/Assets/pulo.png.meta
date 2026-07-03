@@ -1,0 +1,663 @@
+fileFormatVersion: 2
+guid: 261af530e19db7c47b30fe7a0605c30d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5311882130841809892
+    second: pulo_0
+  - first:
+      213: 5767939488471193840
+    second: pulo_1
+  - first:
+      213: -2754560782311760037
+    second: pulo_2
+  - first:
+      213: 1222643363218997401
+    second: pulo_3
+  - first:
+      213: 5389663362480084635
+    second: pulo_4
+  - first:
+      213: -2045673391160603255
+    second: pulo_5
+  - first:
+      213: -658701691756692144
+    second: pulo_6
+  - first:
+      213: -308678194668509394
+    second: pulo_7
+  - first:
+      213: 2645372358417265110
+    second: pulo_8
+  - first:
+      213: 2425708307071127000
+    second: pulo_9
+  - first:
+      213: -7189159813957278516
+    second: pulo_10
+  - first:
+      213: 8796328519145387902
+    second: pulo_11
+  - first:
+      213: -8319907827438198359
+    second: pulo_12
+  - first:
+      213: -4588988631757228797
+    second: pulo_13
+  - first:
+      213: -1690658005699885831
+    second: pulo_14
+  - first:
+      213: -8176334053080375210
+    second: pulo_15
+  - first:
+      213: 2899564414103897266
+    second: pulo_16
+  - first:
+      213: -7425687345512733376
+    second: pulo_17
+  - first:
+      213: -726781040019354555
+    second: pulo_18
+  - first:
+      213: 5122704253389337491
+    second: pulo_19
+  - first:
+      213: 917392284342600995
+    second: pulo_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pulo_0
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 4136
+        width: 965
+        height: 828
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1ccd6678576846b0800000000000000
+      internalID: -5311882130841809892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pulo_1
+      rect:
+        serializedVersion: 2
+        x: 1771
+        y: 4136
+        width: 965
+        height: 828
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f81648a766db0050800000000000000
+      internalID: 5767939488471193840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pulo_2
+      rect:
+        serializedVersion: 2
+        x: 3271
+        y: 4136
+        width: 965
+        height: 778
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5fd5121095d5c9d0800000000000000
+      internalID: -2754560782311760037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pulo_3
+      rect:
+        serializedVersion: 2
+        x: 4771
+        y: 4136
+        width: 965
+        height: 778
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99048a739a3b7f010800000000000000
+      internalID: 1222643363218997401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pulo_4
+      rect:
+        serializedVersion: 2
+        x: 6254
+        y: 4136
+        width: 982
+        height: 725
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b961093c54eebca40800000000000000
+      internalID: 5389663362480084635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pulo_5
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 3136
+        width: 982
+        height: 725
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98d4761a3ee4c93e0800000000000000
+      internalID: -2045673391160603255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pulo_6
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 3136
+        width: 1008
+        height: 725
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05db4e12d42dbd6f0800000000000000
+      internalID: -658701691756692144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pulo_7
+      rect:
+        serializedVersion: 2
+        x: 3246
+        y: 3136
+        width: 1008
+        height: 725
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e27efd041da57bbf0800000000000000
+      internalID: -308678194668509394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pulo_8
+      rect:
+        serializedVersion: 2
+        x: 4745
+        y: 3135
+        width: 1008
+        height: 815
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d1391ae42046b420800000000000000
+      internalID: 2645372358417265110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pulo_9
+      rect:
+        serializedVersion: 2
+        x: 6245
+        y: 3135
+        width: 1008
+        height: 815
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dd40b37ad8d9a120800000000000000
+      internalID: 2425708307071127000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pulo_10
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 2132
+        width: 911
+        height: 869
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc4209f2d39fa3c90800000000000000
+      internalID: -7189159813957278516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pulo_11
+      rect:
+        serializedVersion: 2
+        x: 1793
+        y: 2132
+        width: 911
+        height: 869
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e777c47ee26d21a70800000000000000
+      internalID: 8796328519145387902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pulo_12
+      rect:
+        serializedVersion: 2
+        x: 3304
+        y: 2192
+        width: 889
+        height: 809
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a1ed8569efb98c80800000000000000
+      internalID: -8319907827438198359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pulo_13
+      rect:
+        serializedVersion: 2
+        x: 4804
+        y: 2192
+        width: 889
+        height: 809
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 305fdc52723a050c0800000000000000
+      internalID: -4588988631757228797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pulo_14
+      rect:
+        serializedVersion: 2
+        x: 6322
+        y: 2237
+        width: 843
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f4869550839988e0800000000000000
+      internalID: -1690658005699885831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pulo_15
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 1237
+        width: 843
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 650e631bf73d78e80800000000000000
+      internalID: -8176334053080375210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pulo_16
+      rect:
+        serializedVersion: 2
+        x: 1793
+        y: 1365
+        width: 910
+        height: 613
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b4c60ad8725d3820800000000000000
+      internalID: 2899564414103897266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pulo_17
+      rect:
+        serializedVersion: 2
+        x: 3293
+        y: 1365
+        width: 910
+        height: 613
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 045a995c3b8a2f890800000000000000
+      internalID: -7425687345512733376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pulo_18
+      rect:
+        serializedVersion: 2
+        x: 4802
+        y: 1606
+        width: 896
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54c4828ae74f9e5f0800000000000000
+      internalID: -726781040019354555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pulo_19
+      rect:
+        serializedVersion: 2
+        x: 6302
+        y: 1606
+        width: 896
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39377a09060871740800000000000000
+      internalID: 5122704253389337491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pulo_20
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 414
+        width: 800
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 325cceb0c6b3bbc00800000000000000
+      internalID: 917392284342600995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      pulo_0: -5311882130841809892
+      pulo_1: 5767939488471193840
+      pulo_10: -7189159813957278516
+      pulo_11: 8796328519145387902
+      pulo_12: -8319907827438198359
+      pulo_13: -4588988631757228797
+      pulo_14: -1690658005699885831
+      pulo_15: -8176334053080375210
+      pulo_16: 2899564414103897266
+      pulo_17: -7425687345512733376
+      pulo_18: -726781040019354555
+      pulo_19: 5122704253389337491
+      pulo_2: -2754560782311760037
+      pulo_20: 917392284342600995
+      pulo_3: 1222643363218997401
+      pulo_4: 5389663362480084635
+      pulo_5: -2045673391160603255
+      pulo_6: -658701691756692144
+      pulo_7: -308678194668509394
+      pulo_8: 2645372358417265110
+      pulo_9: 2425708307071127000
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
