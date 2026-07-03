@@ -83,7 +83,7 @@ public class PlayerStateManager : MonoBehaviour
         // states todo frame
         currentState.UpdateState(this);
 
-        Debug.Log(currentState);
+        
     }
     
     //Estamos trazendo o OnTriggerEnter da Unity para cá, e lançando para nossos

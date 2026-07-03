@@ -37,12 +37,11 @@ public class DirBState : BodyBaseState
 
     private IEnumerator Wait(BodyStateManager body)
     {
-        while (body.input.y !< 0)
+        while (body.input.x > 0)
         {
             yield return new WaitForFixedUpdate();
         }
-        head.SetBool("Baixo", false);
+        head.SetBool("Direita", false);
         body.SwitchState(body.IdleState);
-        yield return null;
     }
 }

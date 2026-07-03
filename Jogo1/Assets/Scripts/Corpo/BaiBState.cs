@@ -37,12 +37,11 @@ public class BaiBState : BodyBaseState
 
     private IEnumerator Wait(BodyStateManager body)
     {
-        while (body.input.y !< 0)
+        while (body.input.y < 0)
         {
-           
+            yield return new WaitForFixedUpdate();
         }
         head.SetBool("Baixo", false);
         body.SwitchState(body.IdleState);
-        yield return null;
     }
 }

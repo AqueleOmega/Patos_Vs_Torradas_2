@@ -59,7 +59,6 @@ public class inimigo : MonoBehaviour
         {
             int escolha = 0;
             escolha = Random.Range(1,4);
-            Debug.Log(escolha);
             if (escolha == 1)
             {
                 StartCoroutine(Ataque_base());
@@ -151,14 +150,13 @@ public class inimigo : MonoBehaviour
             
         }
         tempo_3 = 0;
-        Debug.Log("oi");
-        Debug.Log(tempo_4);
+       
         while (tempo_4 <= 1f)
         {
             tempo_4 += Time.deltaTime;
             yield return new WaitForFixedUpdate();
         }
-        Debug.Log("Tchau");
+       
         tempo_4 = 0;
         sr.sprite = quadrado;
         C2D.enabled = true;
