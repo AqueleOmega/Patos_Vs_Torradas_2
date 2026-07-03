@@ -25,23 +25,45 @@ public class PlayerStateIdle : PlayerBaseState
 
     public override void UpdateState(PlayerStateManager player)
     {
-        Debug.Log(player.input);
+        if (player.input.x < 0 && player.input.y < 0)
+        {
+            Debug.Log(player.input);
+            player.SwitchState(player.diagEsqYState);
+        }
+
+        else if (player.input.x > 0 && player.input.y < 0)
+        {
+            Debug.Log(player.input);
+            player.SwitchState(player.diagDirYState);
+        }
+
+        else if (player.input.x < 0 && player.input.y > 0)
+        {
+            Debug.Log(player.input);
+            player.SwitchState(player.diagEsqState);
+        }
+
+        else if (player.input.x > 0 && player.input.y > 0)
+        {
+            Debug.Log(player.input);
+            player.SwitchState(player.diagDirState);
+        }
         
-        if (player.input.x > 0)
+        else if (player.input.x > 0)
         {
             player.SwitchState(player.DireitaState);
         }
-        if (player.input.x < 0)
+        else if (player.input.x < 0)
         {
             player.SwitchState(player.EsquerdaState);
         }
 
-        if(player.input.y > 0)
+        else if (player.input.y > 0)
         {
             player.SwitchState(player.CimaState);
         }
 
-        if (player.input.y < 0)
+        else if (player.input.y < 0)
         {
             player.SwitchState(player.BaixoState);
         }
