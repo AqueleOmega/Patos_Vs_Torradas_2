@@ -16,13 +16,13 @@ public class DirBState : BodyBaseState
     {
         head.SetBool("Direita", true);
 
-        // CORREÇÃO: Usa o 'body' para iniciar a Corrotina
+        
         body.StartCoroutine(Wait(body));
     }
 
     public override void UpdateState(BodyStateManager body)
     {
-        // Debug.Log("Entrou"); // Cuidado com o spam no console aqui
+        // Debug.Log("Entrou"); 
     }
 
     public override void OnCollisionEnter(BodyStateManager body, Collision collision)

@@ -11,6 +11,7 @@ public class inimigo : MonoBehaviour
 {
     public Rigidbody2D rb;
     public Collider2D C2D;
+    public Collider2D C2D2;
     public float vida;
     float tempoAtual = 0f;
     float tempoTotal = 3f;
@@ -30,7 +31,8 @@ public class inimigo : MonoBehaviour
     public Sprite quadrado;
     public SpriteRenderer sr;
     public GameObject bala_copia;
-
+    public Animator anim;
+    bool caindo = true;
 
     void Start()
     {
@@ -44,14 +46,19 @@ public class inimigo : MonoBehaviour
         
         tempoAtual += Time.deltaTime;
 
-        if (atk1 == false && parte2 == false)
+        if (atk1 == false && parte2 == false)   
         {
-            
-            Vector2 direcao = jogador.position - transform.position;
-            float angulo = Mathf.Atan2(direcao.y, direcao.x) * Mathf.Rad2Deg;
+            if (atk1 == false && atk2 == false && atk3 == false && caindo == true)
+            {
+                
+            }
+            else
+            {
+                Vector2 direcao = jogador.position - transform.position;
+                float angulo = Mathf.Atan2(direcao.y, direcao.x) * Mathf.Rad2Deg;
 
-            transform.eulerAngles = new Vector3(0, 0, angulo);
-            
+                transform.eulerAngles = new Vector3(0, 0, angulo);
+            }
         }
 
         // Isso tá rodando todo frame
@@ -92,6 +99,7 @@ public class inimigo : MonoBehaviour
                 atk = false;
                 atk1 = false;
                 StopCoroutine(Ataque_base());
+                //srpite 1 para
                 rb.linearVelocity = Vector2.zero;
             }
             if(atk2 == true){
@@ -107,6 +115,10 @@ public class inimigo : MonoBehaviour
     {
         atk = true;
         atk1 = true;
+        Vector2 direcao = jogador.position - transform.position;
+        float angulo = Mathf.Atan2(direcao.y, direcao.x) * Mathf.Rad2Deg;
+
+        transform.eulerAngles = new Vector3(0, 0, angulo);
         while (atk1 == true)
         {
             rb.AddForce(transform.right * strengh1);
@@ -132,13 +144,15 @@ public class inimigo : MonoBehaviour
             transform.localScale = transform.localScale - new Vector3(strenght2,strenght2,strenght2);
             yield return new WaitForFixedUpdate();
         }
+        anim.SetBool("Alvo", true);
         sr.sprite = alvo;
         parte1 = false;
 
-        
+        //deixa o base
         yield return new WaitForSeconds(1f);
         transform.localScale = scale;
         C2D.enabled = false;
+        C2D2.enabled = false;
 
         while (tempo_3 <= 3f)
         {
@@ -158,9 +172,20 @@ public class inimigo : MonoBehaviour
         }
        
         tempo_4 = 0;
-        sr.sprite = quadrado;
-        C2D.enabled = true;
+        anim.SetBool("Alvo", false);
 
+
+        anim.SetBool("Caindo", true);
+        caindo = true;
+
+        C2D.enabled = true;
+        C2D2.enabled = true;
+
+
+        yield return new WaitForSeconds(1);
+
+        caindo = false;
+        anim.SetBool("Caindo", false);
         tempoAtual = 0f;
 
 
@@ -172,6 +197,8 @@ public class inimigo : MonoBehaviour
 
     IEnumerator Pursuit()
     {
+        anim.SetBool("Furação", true);
+        Debug.Log("Furação rodando");
         atk = true;
         atk3 = true;
         float antigo = strenght3;
@@ -187,6 +214,7 @@ public class inimigo : MonoBehaviour
         tempoAtual = 0f;
         strenght3 = antigo;
         rb.linearVelocity = new Vector2(0, 0);
+        anim.SetBool("Furação", false);
         yield return null;
     }
 }

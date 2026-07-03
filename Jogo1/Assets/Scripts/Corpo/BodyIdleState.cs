@@ -26,7 +26,7 @@ public class BodyStateIdle : BodyBaseState
 
     public override void UpdateState(BodyStateManager body)
     {
-        Debug.Log(body.input);
+        //Debug.Log(body.input);
         
         if (body.input.x > 0)
         {

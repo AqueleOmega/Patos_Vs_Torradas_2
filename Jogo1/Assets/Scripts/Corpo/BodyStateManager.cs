@@ -71,7 +71,7 @@ public class BodyStateManager : MonoBehaviour
         // states todo frame
         currentState.UpdateState(this);
 
-        Debug.Log(currentState);
+        //Debug.Log(currentState);
     }
     
     //Estamos trazendo o OnTriggerEnter da Unity para cá, e lançando para nossos

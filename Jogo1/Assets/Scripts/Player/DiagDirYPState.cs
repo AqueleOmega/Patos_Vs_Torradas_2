@@ -14,13 +14,13 @@ public class DiagDirYPState : PlayerBaseState
     {
         head.SetBool("DiagDir-Y", true);
 
-        // CORREÇÃO: Usa o 'player' para iniciar a Corrotina
+
         player.StartCoroutine(Wait(player));
     }
 
     public override void UpdateState(PlayerStateManager player)
     {
-        // Debug.Log("Entrou"); // Cuidado com o spam no console aqui
+
     }
 
     public override void OnCollisionEnter(PlayerStateManager player, Collision collision)

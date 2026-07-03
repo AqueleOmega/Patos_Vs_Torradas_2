@@ -16,13 +16,13 @@ public class BaiBState : BodyBaseState
     {
         head.SetBool("Baixo", true);
 
-        // CORREÇÃO: Usa o 'player' para iniciar a Corrotina
+        
         body.StartCoroutine(Wait(body));
     }
 
     public override void UpdateState(BodyStateManager body)
     {
-        // Debug.Log("Entrou"); // Cuidado com o spam no console aqui
+        // Debug.Log("Entrou"); 
     }
 
     public override void OnCollisionEnter(BodyStateManager body, Collision collision)
